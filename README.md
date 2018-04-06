@@ -11,6 +11,3 @@ You can find deployment instructions [here](https://devcenter.heroku.com/article
 4. add a new outgoing webhook and fill out the integration form with your new url, name your bot! Ours is Batbot :bat:
 5. Test it out! 
 
-<img alt="" src="/imgs/sample.gif"/>
-
-![Alt text](/imgs/sample.gif?raw=true)
