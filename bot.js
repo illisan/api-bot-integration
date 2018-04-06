@@ -3,13 +3,17 @@ const app = express()
 const port = process.argv[2] || 9090
 const bodyParser = require('body-parser')
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
 
 
 //Creating a test endpoint to ensure server is working as expected.
 app.get('/', (req, res) => {
     res.status(200).send('Hello World')
+})
+
+app.listen(port, (req, res) => {
+    console.log(`Listening on port ${port}`)
 })
 
 app.post ('/hello', (req, res, next) => {
@@ -25,6 +29,3 @@ app.post ('/hello', (req, res, next) => {
     }
 })
 
-app.listen(port, (req, res) => {
-    console.log(`Listening on port ${port}`)
-})
