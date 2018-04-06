@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.argv[2] || 9090
+const port = process.env.PORT || 9090
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -25,7 +25,7 @@ app.post ('/hello', (req, res, next) => {
     if(userName !== 'slackbot') { 
         return res.status(200).json(botPayload)
     } else {
-        return res.status(200).end
+        return res.status(200).end()
     }
 })
 
