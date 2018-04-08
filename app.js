@@ -12,9 +12,7 @@ app.get('/', (req, res) => {
     res.status(200).send('Hello World')
 })
 
-app.listen(port, (req, res) => {
-    console.log(`Listening on port ${port}`)
-})
+
 
 app.post ('/hello', (req, res, next) => {
     let userName = req.body.user_name
@@ -29,3 +27,6 @@ app.post ('/hello', (req, res, next) => {
     }
 })
 
+app.listen(port, (req, res) => {
+    console.log(`Listening on port ${port}`)
+})
